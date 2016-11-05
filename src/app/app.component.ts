@@ -13,6 +13,11 @@ export class AppComponent {
   date: number = Date.now();
   count:number = 0;
 
+  post = {
+    title: "Title",
+    isFavorite: true
+  };
+
   buttonOnClick($event) {
     $event.stopPropagation();
     console.log("mouse clicked", $event);

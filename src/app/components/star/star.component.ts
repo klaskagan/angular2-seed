@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, Input} from '@angular/core';
 
 @Component({
   selector: 'app-star',
@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StarComponent implements OnInit {
 
-  clicked: boolean;
+  @Input() isFavorite: boolean;
 
   constructor() { }
 
@@ -15,7 +15,7 @@ export class StarComponent implements OnInit {
   }
 
   starClicked() {
-    this.clicked = !this.clicked;
+    this.isFavorite = !this.isFavorite;
   }
 
 }
