@@ -1,33 +1,19 @@
 import {Injectable} from '@angular/core';
+import {Tweet} from "../components/tweet/Tweet";
 
 @Injectable()
 export class TweetService {
 
-  tweets: [{}];
+  tweets: Tweet[];
 
   constructor() {
-    this.tweets = [
-      {
-        heading: "ARSTOT",
-        content: "Come on you gunners!",
-        userName: "klaskagan",
-        likeCount: 30
-      },
-      {
-        heading: "TRUMP is a giant duche",
-        content: "You all f*!kers will shit your pants!",
-        userName: "skankhunt42",
-        likeCount: -9
-      },
-      {
-        heading: "AngularJS 2",
-        content: "This framework looks awesome",
-        userName: "rp33",
-        likeCount: 4
-      }];
+    var tweet1 = new Tweet("ARSTOT","Come on you gunners!","klaskagan", 30);
+    var tweet2 = new Tweet("TRUMP is a giant duche", "You all f*!kers will shit your pants!", "skankhunt42", -9);
+    var tweet3 = new Tweet("AngularJS News", "This framework looks awesome", "rp33", 4);
+    this.tweets = [tweet1, tweet2, tweet3];
   }
 
-  getTweets() {
+  getTweets() : Tweet[] {
     return this.tweets;
   }
 
