@@ -7,7 +7,7 @@ import {Component} from '@angular/core';
 })
 export class AppComponent {
   isButtonActive: boolean = true;
-  title = 'app works!!!';
+  title = 'app works!';
   message = 'Angular 2 welcomes you on ';
   description = "First page";
   date: number = Date.now();
