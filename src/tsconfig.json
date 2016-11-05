@@ -3,8 +3,9 @@
     "declaration": false,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
+
     "lib": ["es6", "dom"],
-    "mapRoot": "./",
+    "mapRoot": "../dist/out-tsc",
     "module": "es6",
     "moduleResolution": "node",
     "outDir": "../dist/out-tsc",
