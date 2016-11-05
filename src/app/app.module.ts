@@ -8,6 +8,8 @@ import {CoursesComponent} from "./courses/courses.component";
 import { AuthorsComponent } from './authors/authors.component';
 import {AutoGrowDirective} from "./directives/auto-grow.directive";
 import { StarComponent } from './components/star/star.component';
+import { LikeComponent } from './components/like/like.component';
+import { VotePollComponent } from './components/vote-poll/vote-poll.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { StarComponent } from './components/star/star.component';
     CoursesComponent,
     AuthorsComponent,
     AutoGrowDirective,
-    StarComponent
+    StarComponent,
+    LikeComponent,
+    VotePollComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,17 @@
+.default {
+  color: #cccccc;
+  font-size: 3em;
+}
+
+.liked {
+  color: deeppink;
+  font-size: 3em;
+}
+
+.default:hover, .liked:hover {
+  cursor: pointer;
+}
+
+.like-count {
+  font-size: 3em;
+}

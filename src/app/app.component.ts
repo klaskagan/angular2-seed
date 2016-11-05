@@ -15,7 +15,14 @@ export class AppComponent {
 
   post = {
     title: "Title",
-    isFavorite: true
+    isFavorite: true,
+    voteCount: 10,
+    myVote: 0
+  };
+
+  tweet = {
+    totalLikes: 10,
+    iLike: false
   };
 
   buttonOnClick($event) {
@@ -29,7 +36,11 @@ export class AppComponent {
   }
 
   onFavoriteChange($event) {
-    console.log($event)
+    console.log($event);
+  }
+
+  onVote($event) {
+    console.log($event);
   }
 
 }

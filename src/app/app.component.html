@@ -1,15 +1,21 @@
 <div class="container-fluid">
-  <h1>
-    {{title}}
-  </h1>
+  <div class="panel panel-default">
+    <h1>
+      {{title}}
+    </h1>
+    <input type="text" [(ngModel)]="title"/>
+  </div>
 
   <h2>
     {{message}}
     {{date | date:'dd.MM.yyyy HH:mm:ss'}}
   </h2>
 
-  <courses></courses>
-  <authors></authors>
+  <div class="panel panel-default">
+    <courses></courses>
+    <authors></authors>
+  </div>
+
 
   <button class="btn btn-primary" [class.active]="isButtonActive"
           [style.backgroundColor]="isButtonActive ? 'red' : 'gray'">Submit
@@ -18,7 +24,12 @@
     <button (click)="buttonOnClick($event)">On click {{count}}</button>
   </div>
 
-  <input type="text" [(ngModel)]="title"/>
+  <div class="panel panel-default">
+    <app-star [isFavorite]="post.isFavorite" (change)="onFavoriteChange($event)"></app-star>
+    <app-like [likeCount]="tweet.totalLikes" [isLiked]="tweet.iLike"></app-like>
+  </div>
 
-  <app-star [isFavorite]="post.isFavorite" (change)="onFavoriteChange($event)"></app-star>
+  <div class="panel panel-default">
+    <app-vote-poll [voteCount]="post.voteCount" [myVote]="post.myVote" (vote)="onVote($event)"></app-vote-poll>
+  </div>
 </div>
