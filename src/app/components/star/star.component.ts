@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StarComponent implements OnInit {
 
+  clicked: boolean;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  starClicked() {
+    this.clicked = !this.clicked;
   }
 
 }

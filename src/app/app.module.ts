@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import {CoursesComponent} from "./courses/courses.component";
 import { AuthorsComponent } from './authors/authors.component';
 import {AutoGrowDirective} from "./directives/auto-grow.directive";
+import { StarComponent } from './components/star/star.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CoursesComponent,
     AuthorsComponent,
-    AutoGrowDirective
+    AutoGrowDirective,
+    StarComponent
   ],
   imports: [
     BrowserModule,
