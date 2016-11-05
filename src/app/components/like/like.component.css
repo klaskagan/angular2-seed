@@ -1,11 +1,11 @@
 .default {
   color: #cccccc;
-  font-size: 3em;
+  font-size: 1.2em;
 }
 
 .liked {
   color: deeppink;
-  font-size: 3em;
+  font-size: 1.2em;
 }
 
 .default:hover, .liked:hover {
@@ -13,5 +13,5 @@
 }
 
 .like-count {
-  font-size: 3em;
+  font-size: 1.2em;
 }

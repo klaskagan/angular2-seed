@@ -1,9 +1,11 @@
 import {Component} from '@angular/core';
+import {TweetService} from "./services/tweet.service";
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  providers: [TweetService]
 })
 export class AppComponent {
   isButtonActive: boolean = true;
@@ -24,6 +26,12 @@ export class AppComponent {
     totalLikes: 10,
     iLike: false
   };
+
+  tweets: any[];
+
+  constructor(tweetService: TweetService) {
+    this.tweets = tweetService.getTweets();
+  }
 
   buttonOnClick($event) {
     $event.stopPropagation();
