@@ -28,4 +28,8 @@ export class AppComponent {
     console.log("On div click");
   }
 
+  onFavoriteChange($event) {
+    console.log($event)
+  }
+
 }
