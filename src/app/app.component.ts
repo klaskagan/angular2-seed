@@ -11,5 +11,16 @@ export class AppComponent {
   message = 'Angular 2 welcomes you on ';
   description = "First page";
   date: number = Date.now();
+  count:number = 0;
+
+  buttonOnClick($event) {
+    $event.stopPropagation();
+    console.log("mouse clicked", $event);
+    this.count++;
+  }
+
+  divOnClick() {
+    console.log("On div click");
+  }
 
 }

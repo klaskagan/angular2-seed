@@ -11,3 +11,6 @@
 <authors></authors>
 
 <button class="btn btn-primary" [class.active]="isButtonActive" [style.backgroundColor]="isButtonActive ? 'red' : 'gray'" >Submit</button>
+<div (click)="divOnClick()">
+  <button (click)="buttonOnClick($event)">On click {{count}}</button>
+</div>
