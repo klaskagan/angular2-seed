@@ -13,6 +13,7 @@ import { VotePollComponent } from './components/vote-poll/vote-poll.component';
 import { TweetComponent } from './components/tweet/tweet.component';
 import { SummaryPipe } from './pipes/summary.pipe';
 import { BootstrapPanelComponent } from './components/bootstrap-panel/bootstrap-panel.component';
+import { ZippyComponent } from './components/zippy/zippy.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { BootstrapPanelComponent } from './components/bootstrap-panel/bootstrap-
     VotePollComponent,
     TweetComponent,
     SummaryPipe,
-    BootstrapPanelComponent
+    BootstrapPanelComponent,
+    ZippyComponent
   ],
   imports: [
     BrowserModule,

@@ -3,7 +3,7 @@
     <h1>
       {{title}}
     </h1>
-    <input type="text" [(ngModel)]="title"/>
+    <input type="text" [(ngModel)]="title" class="pull-right"/>
   </div>
 
   <h2>
@@ -63,6 +63,18 @@
     <div class="heading">Voting poll</div>
     <div class="body">
       <app-vote-poll [voteCount]="post.voteCount" [myVote]="post.myVote" (vote)="onVote($event)"></app-vote-poll>
+    </div>
+  </bs-panel>
+
+  <bs-panel>
+    <div class="heading">Accordion panel</div>
+    <div class="body">
+      <zippy title="Title 1">
+        Content
+      </zippy>
+      <zippy  title="Title 2">
+        Another zippy content
+      </zippy>
     </div>
   </bs-panel>
 
