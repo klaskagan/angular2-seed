@@ -14,6 +14,7 @@ export class ContactFormComponent implements OnInit {
 
   onSubmit(ngForm) {
     let data = ngForm.value;
+    console.log(ngForm);
     console.log(data.firstName);
     console.log(data.comment);
   }
