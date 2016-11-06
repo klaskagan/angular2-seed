@@ -12,34 +12,58 @@
   </h2>
 
 
-  <app-tweet *ngFor="let aTweet of tweets" [heading]="aTweet.heading" [content]="aTweet.content"
-             [userName]="aTweet.userName" [likeCount]="aTweet.likeCount"></app-tweet>
+  <bs-panel>
+    <div class="heading">Tweets</div>
+    <div class="body">
+      <app-tweet *ngFor="let aTweet of tweets" [heading]="aTweet.heading" [content]="aTweet.content"
+                 [userName]="aTweet.userName" [likeCount]="aTweet.likeCount"></app-tweet>
+    </div>
+  </bs-panel>
 
-  <div class="panel panel-default">
-    <courses></courses>
-    <authors></authors>
-  </div>
+
+  <bs-panel>
+    <div class="heading">List of courses and authors</div>
+    <div class="body">
+      <courses></courses>
+      <authors></authors>
+    </div>
+  </bs-panel>
 
 
-  <button class="btn btn-primary" [class.active]="isButtonActive"
-          [ngStyle]="{
+
+  <bs-panel>
+    <div class="heading">Buttons</div>
+    <div class="body">
+      <button class="btn btn-primary" [class.active]="isButtonActive"
+              [ngStyle]="{
                         backgroundColor: isButtonActive ? 'red'   : 'gray',
                         color          : isButtonActive ? 'white' : 'black',
                         fontWeight     : isButtonActive ? 'bold'  : 'normal'
                      }"
-  >Submit
-  </button>
-  <div (click)="divOnClick()">
-    <button (click)="buttonOnClick($event)">On click {{count}}</button>
-  </div>
+      >Submit
+      </button>
+      <div (click)="divOnClick()">
+        <button (click)="buttonOnClick($event)">On click {{count}}</button>
+      </div>
+    </div>
+  </bs-panel>
 
-  <div class="panel panel-default">
-    <app-star [isFavorite]="post.isFavorite" (change)="onFavoriteChange($event)"></app-star>
-    <app-like [likeCount]="tweet.totalLikes" [isLiked]="tweet.iLike"></app-like>
-  </div>
 
-  <div class="panel panel-default">
-    <app-vote-poll [voteCount]="post.voteCount" [myVote]="post.myVote" (vote)="onVote($event)"></app-vote-poll>
-  </div>
+  <bs-panel>
+    <div class="heading">Favorite and Like</div>
+    <div class="body">
+      <app-star [isFavorite]="post.isFavorite" (change)="onFavoriteChange($event)"></app-star>
+    </div>
+    <div class="body">
+      <app-like [likeCount]="tweet.totalLikes" [isLiked]="tweet.iLike"></app-like>
+    </div>
+  </bs-panel>
+
+  <bs-panel>
+    <div class="heading">Voting poll</div>
+    <div class="body">
+      <app-vote-poll [voteCount]="post.voteCount" [myVote]="post.myVote" (vote)="onVote($event)"></app-vote-poll>
+    </div>
+  </bs-panel>
 
 </div>

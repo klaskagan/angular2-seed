@@ -12,6 +12,7 @@ import { LikeComponent } from './components/like/like.component';
 import { VotePollComponent } from './components/vote-poll/vote-poll.component';
 import { TweetComponent } from './components/tweet/tweet.component';
 import { SummaryPipe } from './pipes/summary.pipe';
+import { BootstrapPanelComponent } from './components/bootstrap-panel/bootstrap-panel.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { SummaryPipe } from './pipes/summary.pipe';
     LikeComponent,
     VotePollComponent,
     TweetComponent,
-    SummaryPipe
+    SummaryPipe,
+    BootstrapPanelComponent
   ],
   imports: [
     BrowserModule,
