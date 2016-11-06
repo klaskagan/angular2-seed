@@ -22,7 +22,12 @@
 
 
   <button class="btn btn-primary" [class.active]="isButtonActive"
-          [style.backgroundColor]="isButtonActive ? 'red' : 'gray'">Submit
+          [ngStyle]="{
+                        backgroundColor: isButtonActive ? 'red'   : 'gray',
+                        color          : isButtonActive ? 'white' : 'black',
+                        fontWeight     : isButtonActive ? 'bold'  : 'normal'
+                     }"
+  >Submit
   </button>
   <div (click)="divOnClick()">
     <button (click)="buttonOnClick($event)">On click {{count}}</button>
