@@ -14,6 +14,7 @@ import { TweetComponent } from './components/tweet/tweet.component';
 import { SummaryPipe } from './pipes/summary.pipe';
 import { BootstrapPanelComponent } from './components/bootstrap-panel/bootstrap-panel.component';
 import { ZippyComponent } from './components/zippy/zippy.component';
+import { ContactFormComponent } from './components/contact-form/contact-form.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { ZippyComponent } from './components/zippy/zippy.component';
     TweetComponent,
     SummaryPipe,
     BootstrapPanelComponent,
-    ZippyComponent
+    ZippyComponent,
+    ContactFormComponent
   ],
   imports: [
     BrowserModule,
