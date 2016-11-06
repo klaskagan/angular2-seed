@@ -9,7 +9,7 @@
       <span class="username">@{{userName}}</span>
     </h4>
     <h3></h3>
-    <p>{{content}}</p>
+    <p>{{content | summary:[60, 'dummy-param'] }}</p>
     <app-like [likeCount]="likeCount" [isLiked]="liked"></app-like>
   </div>
 </div>
