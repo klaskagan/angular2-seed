@@ -1,1 +1,7 @@
-<i class="glyphicon star-large" (click)="starClicked()" [class.glyphicon-star]="isFavorite" [class.glyphicon-star-empty]="!isFavorite"></i>
+<i class="glyphicon star-large" (click)="starClicked()"
+   [ngClass]="{
+      'glyphicon-star': isFavorite,
+      'glyphicon-star-empty': !isFavorite
+    }"
+>
+</i>
