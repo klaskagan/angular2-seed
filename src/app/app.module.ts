@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import {FormsModule} from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
@@ -15,6 +15,7 @@ import { SummaryPipe } from './pipes/summary.pipe';
 import { BootstrapPanelComponent } from './components/bootstrap-panel/bootstrap-panel.component';
 import { ZippyComponent } from './components/zippy/zippy.component';
 import { ContactFormComponent } from './components/contact-form/contact-form.component';
+import { SubscriptionFormComponent } from './components/subscription-form/subscription-form.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { ContactFormComponent } from './components/contact-form/contact-form.com
     SummaryPipe,
     BootstrapPanelComponent,
     ZippyComponent,
-    ContactFormComponent
+    ContactFormComponent,
+    SubscriptionFormComponent
   ],
   imports: [
     BrowserModule,

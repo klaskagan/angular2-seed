@@ -1,0 +1,33 @@
+<form #f="ngForm" (submit)="onFormSubmit(f)">
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input ngModel #n="ngModel" name=name id="name" type="text" class="form-control" ngControl="name" required minlength="3">
+    <div *ngIf="n.touched && n.errors">
+      <div *ngIf="n.errors.required" class="alert alert-danger">
+        Name is required
+      </div>
+      <div *ngIf="n.errors.minlength" class="alert alert-danger">
+        Minimum length is {{n.errors.minlength.requiredLength}}
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input ngModel #e="ngModel" name="email" id="email" type="email" class="form-control" ngControl="email" required>
+    <div class="alert alert-danger" *ngIf="e.touched && e.errors">
+      Email is required
+
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="email">Frequency of emails</label>
+    <select ngModel #fr="ngModel" name="frequency" class="form-control" required>
+      <option value="{{null}}"></option>
+      <option *ngFor="let freq of emailPeriods" [label]="freq" [value]="freq"></option>
+    </select>
+    <div class="alert alert-danger" *ngIf="fr.touched && fr.errors">
+      Please select frequency
+    </div>
+  </div>
+  <button class="btn btn-primary" type="submit" [disabled]="fr.invalid">Submit</button>
+</form>
