@@ -1,4 +1,4 @@
-import {FormControl} from "@angular/forms";
+import {FormControl, FormGroup, AbstractControl} from "@angular/forms";
 
 
 export class FormValidators {
@@ -18,6 +18,16 @@ export class FormValidators {
   static cannotContainSpace(control: FormControl): any {
     if (control.value.indexOf(" ") >= 0) {
       return {containsSpace: true}
+    }
+    return null;
+  }
+
+  static passwordsShouldMatch(group: FormGroup): any {
+    let newPassword = group.get("newPw").value;
+    let repeatPassword = group.get("repeatPw").value;
+
+    if (newPassword !== repeatPassword) {
+      return {passwordsShouldMatch: true};
     }
     return null;
   }
