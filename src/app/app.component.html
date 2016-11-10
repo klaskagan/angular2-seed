@@ -8,8 +8,16 @@
 
   <h2>
     {{message}}
-    {{date | date:'dd.MM.yyyy HH:mm:ss'}}
+    {{date | async | date:'medium'}}
   </h2>
+
+
+  <bs-panel>
+    <div class="heading">Spotify API</div>
+    <div class="body">
+      <api-search></api-search>
+    </div>
+  </bs-panel>
 
 
   <bs-panel>
@@ -28,7 +36,6 @@
       <authors></authors>
     </div>
   </bs-panel>
-
 
 
   <bs-panel>
@@ -72,7 +79,7 @@
       <zippy title="Title 1">
         Content
       </zippy>
-      <zippy  title="Title 2">
+      <zippy title="Title 2">
         Another zippy content
       </zippy>
     </div>
@@ -105,7 +112,6 @@
       <change-password-form></change-password-form>
     </div>
   </bs-panel>
-
 
 
 </div>
