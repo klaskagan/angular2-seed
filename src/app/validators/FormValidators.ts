@@ -10,7 +10,7 @@ export class FormValidators {
           resolve({shouldBeUnique: true});
         }
         resolve(null)
-      }, 1000);
+      }, 1500);
     });
 
   }
