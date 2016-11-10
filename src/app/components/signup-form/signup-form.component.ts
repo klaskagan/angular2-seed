@@ -12,10 +12,10 @@ export class SignUpFormComponent {
 
   constructor(fb: FormBuilder) {
     this.form = fb.group({
-      username: ['', Validators.compose([
-        Validators.required,
-        V.FormValidators.cannotContainSpace]
-      )],
+      username: [
+        'niko', // default value in a form. Should be used when editing existing form
+        Validators.compose([Validators.required, V.FormValidators.cannotContainSpace]), // non async validators
+        V.FormValidators.usernameShouldBeUnique], // async validators
       password: ['', Validators.required]
     })
   }
