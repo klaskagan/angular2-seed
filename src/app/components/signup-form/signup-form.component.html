@@ -18,6 +18,9 @@
         <div *ngIf="username.errors.shouldBeUnique">
           Username already taken
         </div>
+        <div *ngIf="username.errors.invalidLogin">
+          Username or password do not match
+        </div>
       </div>
     </div>
     <div class="form-group">

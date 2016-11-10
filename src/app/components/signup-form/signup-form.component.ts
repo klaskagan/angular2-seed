@@ -22,6 +22,9 @@ export class SignUpFormComponent {
 
 
   onSubmit(value) {
+    this.form.get('username').setErrors({
+      invalidLogin: true
+    });
     console.log(value);
   }
 }
