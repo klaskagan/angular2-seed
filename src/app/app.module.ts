@@ -18,6 +18,7 @@ import {SubscriptionFormComponent} from "./components/subscription-form/subscrip
 import {SignUpFormComponent} from "./components/signup-form/signup-form.component";
 import {ChangePasswordFormComponent} from "./components/change-password-form/change-password-form.component";
 import {ApiSearchComponent} from "./components/api-search/api-search.component";
+import { AdventuresInRxComponent } from './components/adventures-in-rx/adventures-in-rx.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import {ApiSearchComponent} from "./components/api-search/api-search.component";
     SignUpFormComponent,
     ChangePasswordFormComponent,
     ApiSearchComponent,
+    AdventuresInRxComponent,
   ],
   imports: [
     BrowserModule,
